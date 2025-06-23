@@ -548,6 +548,11 @@ nav.sticky-header {
   }
 }
 
+/* .nav-active {
+  background-color: #6B183F !important;
+  color: white !important;
+} */
+
 .nav-active {
   background-color: #6B183F !important;
   color: white !important;
@@ -851,7 +856,6 @@ footer li:hover {
 
 .whychoose-headers {
   background-color: var(--section-font-color);
-  ;
   border-radius: 15px 15px 0 0 !important;
 }
 
@@ -862,7 +866,6 @@ footer li:hover {
   max-height: 220px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
   transition: transform 0.3s ease;
-  margin: 6px;
   display: flex;
   border: none;
   flex-direction: column;
@@ -1221,7 +1224,7 @@ footer li:hover {
     font-size: 0.9rem !important;
   }
 
-  .btn-start-now i{
+  .btn-start-now i {
     font-size: 2.8rem !important;
   }
 }
@@ -1300,4 +1303,228 @@ footer li:hover {
 
 .custom-image-slider-right {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sections-heading {
+  color: var(--section-font-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.sections-content {
+  color: #333333;
+  font-size: 16px;
+}
+
+.common-card {
+  height: 146px;
+  border-radius: 15px 15px 0 0 !important;
+  min-height: 146px;
+  max-height: 220px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+  transition: transform 0.3s ease;
+  /* margin: 6px; */
+  display: flex;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.common-card .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.common-card:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(255, 0, 102, 0.15) 0px 3px 8px;
+}
+
+.common-card h5 {
+  font-size: 1rem;
+  color: #fff;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.common-card p {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  padding: 0 20px 0 20px;
+}
+
+.common-card-headers {
+  background-color: var(--section-font-color);
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.matrimonyx-card {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.matrimonyx-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.matrimonyx-btn-primary {
+  background: linear-gradient(90deg, #ff416c, #dd0055);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.matrimonyx-btn-primary:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #dd0055, #ff416c);
+}
+
+.matrimonyx-feature-section {
+  padding: 20px 0;
+}
+
+.matrimonyx-feature-icon {
+  font-size: 2.5rem;
+  color: #ff416c;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.matrimonyx-feature-card:hover .matrimonyx-feature-icon {
+  transform: rotate(360deg);
+}
+
+.matrimonyx-footer {
+  padding: 10px 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-comparison-table {
+  margin-top: 5px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.custom-comparison-table th,
+.custom-comparison-table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+}
+
+.custom-feature-row th {
+  text-align: left;
+  background-color: #f1f5f9;
+}
+
+tbody>.custom-feature-row>th {
+  font-size: 0.95rem;
+}
+
+tbody>.custom-feature-row>td {
+  font-size: 0.95rem;
+}
+
+.custom-table-title th {
+  background-color: var(--section-font-color) !important;
+  color: #fff !important;
+  font-size: 1rem;
+}
+
+.custom-icon {
+  font-size: 1.5rem;
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 0.6rem;
+    border: 1px solid #dee2e6;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff416c;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+/* Textareas */
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Labels */
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Checkbox */
+.form-check-input {
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.form-check-label {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.faq-matrimoney .accordion-button {
+    border-radius: 1rem 1rem 0 0;
+    font-weight: 600;
+    color: #212529;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+}
+
+.faq-matrimoney .accordion-button:not(.collapsed) {
+    background-color: #ffe4ec;
+    color: #d63384;
+    box-shadow: none;
+}
+
+.faq-matrimoney .accordion-item {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.faq-matrimoney .accordion-body {
+    background-color: #f8f9fa;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+}
+
+.faq-matrimoney i {
+    font-size: 1.1rem;
 }

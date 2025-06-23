@@ -41,14 +41,14 @@ $(document).ready(function () {
   updateClock();
   setInterval(updateClock, 1000);
 
-  $(".custom-image-slider-right").owlCarousel({
-    loop: true,
-    margin: 10,
-    items: 1,
-    dots: false,
-    nav: false,
-    autoplay: true,
-  });
+  // $(".custom-image-slider-right").owlCarousel({
+  //   loop: true,
+  //   margin: 10,
+  //   items: 1,
+  //   dots: false,
+  //   nav: false,
+  //   autoplay: true,
+  // });
 });
 
 let isViewAll = false;

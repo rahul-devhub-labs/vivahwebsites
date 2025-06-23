@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="VivahWebsites" />
+    <meta name="keywords" content="VivahWebsites" />
+    <meta name="author" content="VivahWebsites" />
+    <title>VivahWebsites</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="loader">Loading...</div>
+
+    <div id="header"></div>
+
+    <main class="py-3">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- left content area -->
+                <div id="leftcardlt"></div>
+
+                <!-- center content area -->
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <div class="card border-0 center-card mt-4 mt-md-0">
+                        <h6 class="card-header custom-header text-center"> <i class="fa fa-users text-white me-2"></i> Community
+                            Promoter Registration</h6>
+                        <div class="card-body py-3">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" placeholder="Enter email address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" placeholder="Enter phone number">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-control" placeholder="Enter address">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Role <span class="text-danger">*</span></label>
+                                    <select class="form-select" required>
+                                        <option value="Promoter" selected>Promoter</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" placeholder="Enter password" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" placeholder="Confirm password" required>
+                                </div>
+                                <button type="submit" class="btn matrimonyx-btn-primary py-2" style="background-color: #0d6efd;">
+                                    <i class="fas fa-user-check me-1"></i> Create User
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- right content area -->
+                <div id="rightcardlt"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Scroll to Top Button with Tooltip -->
+    <button id="scrollTopBtn" data-bs-toggle="tooltip" title="Go to Top of Page">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="layout.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+
+</html>
