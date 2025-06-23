@@ -193,9 +193,9 @@ p.text-justify {
 -----------------------------------*/
 
 .top-header {
-  background-color: #822B55;
-  color: white;
-  font-size: 0.97rem;
+  background-color: #992f62;
+  color: #ffffff;
+  font-size: 0.95rem;
   padding: 2px 0;
 }
 
@@ -230,37 +230,37 @@ nav.sticky-header {
   border-top: 1px solid white;
 }
 
+.gap-navbar {
+  gap:2.9rem !important;
+}
+
 /*-----------------------------------
 📱 Social Media Icons
 -----------------------------------*/
-
-.social-icons {
-  display: flex;
-  gap: 8px;
-}
-
 .social-icons a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
   box-shadow:
-    inset 2px 2px 5px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 5px rgba(0, 0, 0, 0.1),
-    2px 2px 8px rgba(0, 0, 0, 0.15);
+    inset 2px 2px 6px rgba(255, 255, 255, 0.7),
+    inset -3px -3px 7px rgba(0, 0, 0, 0.08),
+    3px 3px 10px rgba(0, 0, 0, 0.15);
   position: relative;
-  transition: transform 0.2s, box-shadow 0.3s;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.3s, background 0.3s;
 }
 
 .social-icons a:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
   box-shadow:
-    inset 2px 2px 6px rgba(255, 255, 255, 0.7),
-    inset -2px -2px 6px rgba(0, 0, 0, 0.15),
-    3px 3px 10px rgba(0, 0, 0, 0.2);
+    inset 2px 2px 7px rgba(255, 255, 255, 0.8),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.1),
+    4px 4px 12px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(145deg, #fdfdfd, #e9e9e9);
 }
 
 .social-icons a::before {
@@ -269,18 +269,25 @@ nav.sticky-header {
   top: 3px;
   left: 3px;
   right: 3px;
-  height: 40%;
-  background: rgba(255, 255, 255, 0.4);
+  height: 45%;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  filter: blur(1px);
+  filter: blur(1.5px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .social-icons img {
-  height: 25px;
-  width: 25px;
+  height: 26px;
+  width: 26px;
   z-index: 1;
+  transition: filter 0.3s;
 }
 
+.social-icons a:hover img {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
 /*-----------------------------------
 🔐 Login Button
 -----------------------------------*/
@@ -316,10 +323,10 @@ nav.sticky-header {
   }
 }
 
-#timerTopbar,
+/* #timerTopbar,
 .top-contact {
-  font-weight: 600;
-}
+  font-weight: 500;
+} */
 
 /* ========================
    Mid Header Styles
@@ -337,12 +344,12 @@ nav.sticky-header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6px 6px 4px;
-  /* background: #ffe6f0; */
+  padding: 4px 4px 4px;
+  background: linear-gradient(145deg, #fff7fa, #ffe6f0);
   border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-  border: 1px solid #ffbad0;
-  max-width: 180px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); */
+  border: 1px solid #ff427e;
+  max-width: 200px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -380,16 +387,16 @@ nav.sticky-header {
 /* DTS LOGO WRAPPER (No Shine) */
 .dts-box {
   display: flex;
-  height: 120px;
+  height: 130px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6px 6px 4px;
-  /* background: #ffe6f0; */
+  padding: 4px 4px 4px;
+  background: linear-gradient(145deg, #fff7fa, #ffe6f0);
   border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-  border: 1px solid #ffbad0;
-  max-width: 180px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); */
+  border: 1px solid #ff427e;
+  max-width: 200px;
   margin: auto;
   text-align: center;
   z-index: 1;
@@ -398,11 +405,10 @@ nav.sticky-header {
 /* Shared Logo Styles */
 .vivah-logo,
 .dts-logo {
-  max-height: 87px;
+  max-height: 100px;
   background: #fff;
-  padding: 6px;
+  padding: 4px;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   z-index: 2;
 }
@@ -410,7 +416,7 @@ nav.sticky-header {
 .vivah-logo-wrapper:hover .vivah-logo,
 .dts-box:hover .dts-logo {
   transform: scale(1.05);
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
 }
 
 /* Vivah Caption Text */
@@ -472,22 +478,46 @@ nav.sticky-header {
   }
 }
 
+@keyframes blinkColor {
+  0%, 30% {
+    color: #ff1c77;
+  }
+  50.01%, 100% {
+    color: var(--primary-color);
+  }
+}
+
 .site-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--primary-color);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   letter-spacing: 0.5px;
   white-space: nowrap;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 0 8px rgba(255, 255, 255, 0.2);
+  animation: blinkColor 2s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+.site-title:hover {
+  transform: scale(1.02);
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .site-subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: #555;
-  margin-top: 2px;
+  color: #666;
+  margin-top: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  transition: color 0.3s;
+}
+
+.site-subtitle:hover {
+  color: #333;
+  opacity: 0.9;
 }
 
 .carousel-item {
@@ -522,11 +552,16 @@ nav.sticky-header {
     border-top: 1px solid white;
     top: 133px;
   }
+
+  .gap-navbar {
+    gap: 0 !important;
+  }
+
 }
 
 @media (max-width: 768px) {
   .vivah-logo {
-    max-height: 75px;
+    max-height: 100px;
   }
 
   .site-title {
@@ -536,7 +571,7 @@ nav.sticky-header {
 
 @media (max-width: 480px) {
   .vivah-logo {
-    max-height: 75px;
+    max-height: 100px;
   }
 
   .site-title {
@@ -1057,14 +1092,14 @@ footer li:hover {
 
 .cta-box:nth-child(1)::after,
 .cta-box:nth-child(2)::after {
-  content: "\f178";
+  content: "\f30b";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #b70039;
   position: absolute;
-  top: 50%;
-  right: -2.3rem;
+  top: 34%;
+  right: -2.8rem;
   transform: translateY(-50%);
   animation: arrowBounce 1.5s infinite ease-in-out;
 }
@@ -1157,7 +1192,7 @@ footer li:hover {
   }
 
   50% {
-    transform: translateX(3px);
+    transform: translateX(4px);
     opacity: 0.7;
   }
 }
@@ -1206,13 +1241,13 @@ footer li:hover {
   .cta-box:nth-child(1)::after,
   .cta-box:nth-child(2)::after,
   .cta-box:nth-child(3)::after {
-    content: "\f175";
+    content: "\f309";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: #b70039;
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 9.7rem;
     margin-top: 6.4rem;
     transform: translateY(-50%);
