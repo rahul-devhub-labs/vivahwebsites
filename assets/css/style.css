@@ -14,7 +14,7 @@
   --section-heading-size: 1rem;
   --section-content-size: 0.9em;
   --navbar-bg-color: #ff96c5;
-  --navbar-font-color: #6B183F;
+  --navbar-font-color: #0f0f0f;
   --navbar-hover-bg-color: #8B005D;
 }
 
@@ -231,8 +231,10 @@ nav.sticky-header {
 }
 
 .gap-navbar {
-  gap:2.9rem !important;
+  gap: 1.6rem !important;
+  /* Try reducing from 2.9rem */
 }
+
 
 /*-----------------------------------
 📱 Social Media Icons
@@ -288,6 +290,7 @@ nav.sticky-header {
 .social-icons a:hover img {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 }
+
 /*-----------------------------------
 🔐 Login Button
 -----------------------------------*/
@@ -479,10 +482,14 @@ nav.sticky-header {
 }
 
 @keyframes blinkColor {
-  0%, 30% {
+
+  0%,
+  30% {
     color: #ff1c77;
   }
-  50.01%, 100% {
+
+  50.01%,
+  100% {
     color: var(--primary-color);
   }
 }
@@ -645,7 +652,7 @@ nav.sticky-header {
 }
 
 .navbar-nav .nav-link {
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 8px;
   color: var(--navbar-font-color);
   transition: all 0.3s ease;
@@ -899,6 +906,7 @@ footer li:hover {
   border-radius: 15px 15px 0 0 !important;
   min-height: 146px;
   max-height: 220px;
+  margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
   transition: transform 0.3s ease;
   display: flex;
@@ -1343,11 +1351,18 @@ footer li:hover {
 .sections-heading {
   color: var(--section-font-color);
   font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+.sections-heading:not(:first-child) {
+  margin-top: 1.8rem;
 }
 
 .sections-content {
   color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
   font-size: 16px;
 }
 
@@ -1459,107 +1474,221 @@ footer li:hover {
   }
 }
 
-.custom-comparison-table {
-  margin-top: 5px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
-
-.custom-comparison-table th,
-.custom-comparison-table td {
-  vertical-align: middle;
-  text-align: center;
-  padding: 10px;
-}
-
-.custom-feature-row th {
-  text-align: left;
-  background-color: #f1f5f9;
-}
-
-tbody>.custom-feature-row>th {
-  font-size: 0.95rem;
-}
-
-tbody>.custom-feature-row>td {
-  font-size: 0.95rem;
-}
-
-.custom-table-title th {
-  background-color: var(--section-font-color) !important;
-  color: #fff !important;
-  font-size: 1rem;
-}
-
-.custom-icon {
-  font-size: 1.5rem;
-}
 
 /* Input Fields */
 .form-control {
-    border-radius: 0.6rem;
-    border: 1px solid #dee2e6;
-    box-shadow: none;
-    transition: all 0.3s ease;
+  border-radius: 0.6rem;
+  border: 1px solid #dee2e6;
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
 .form-control:focus {
-    border-color: #ff416c;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+  border-color: #ff416c;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
 }
 
 /* Textareas */
 textarea.form-control {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* Labels */
 .form-label {
-    font-weight: 500;
-    color: #495057;
+  font-weight: 500;
+  color: #495057;
 }
 
 /* Checkbox */
 .form-check-input {
-    cursor: pointer;
-    border-radius: 0.25rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
 }
 
 .form-check-label {
-    font-size: 0.95rem;
-    color: #6c757d;
+  font-size: 0.95rem;
+  color: #6c757d;
 }
 
 .faq-matrimoney .accordion-button {
-    border-radius: 1rem 1rem 0 0;
-    font-weight: 600;
-    color: #212529;
-    transition: all 0.3s ease-in-out;
-    padding: 1rem 1rem;
-    font-size: 1rem;
+  border-radius: 1rem 1rem 0 0;
+  font-weight: 600;
+  color: #212529;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 1rem;
+  font-size: 1rem;
 }
 
 .faq-matrimoney .accordion-button:not(.collapsed) {
-    background-color: #ffe4ec;
-    color: #d63384;
-    box-shadow: none;
+  background-color: #ffe4ec;
+  color: #d63384;
+  box-shadow: none;
 }
 
 .faq-matrimoney .accordion-item {
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #fff;
 }
 
 .faq-matrimoney .accordion-body {
-    background-color: #f8f9fa;
-    border-radius: 0 0 0.5rem 0.5rem;
-    padding: 1rem 1.25rem;
-    font-size: 0.95rem;
+  background-color: #f8f9fa;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
 }
 
 .faq-matrimoney i {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.benefit-section-home p {
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+
+.benefit-section-home i {
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+.text-indigo {
+  color: #6610f2 !important;
+}
+
+.text-teal {
+  color: #20c997 !important;
+}
+
+/* Pricing Cards */
+.pricing-card {
+  background-color: #fff;
+  border: 2px solid #ebd3df;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(163, 2, 86, 0.05);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(163, 2, 86, 0.15);
+}
+
+/* Header Style */
+.pricing-header {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: var(--section-font-color);
+  color: white;
+}
+
+/* Standard Card */
+.standard-style {
+  border-color: #f8d2e3;
+  background: #ffffff;
+}
+
+/* Advanced Card */
+.advanced-style {
+  border-color: #a30256;
+  background: linear-gradient(to bottom right, #fff0f5, #ffffff);
+  position: relative;
+}
+
+/* Ribbon */
+.popular-ribbon {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  background: #ffd7e9;
+  color: #000000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 0 0 0 10px;
+  z-index: 10;
+}
+
+/* List Items */
+.list-group-item {
+  background: transparent;
+  border: none;
+  padding: 0.65rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item i {
+  font-size: 1rem;
+  margin-right: 0.6rem;
+  min-width: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-header h5 {
+    font-size: 1rem;
+  }
+
+  .list-group-item {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .popular-ribbon {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+}
+
+.text-maroon {
+  color: var(--section-bg-color) !important;
+}
+
+.bg-maroon {
+  background-color: var(--section-bg-color) !important;
+}
+
+.bg-light-pink {
+  background-color: #fce4ec !important;
+}
+
+.form-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--section-font-color);
+  /* matches your maroon */
+  border-left: 4px solid var(--section-font-color);
+  ;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.btn-maroon {
+  background-color: var(--section-bg-color);;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-maroon:hover {
+  background-color:var(--section-font-color);
+  color: #fff;
+}
+
+.form-label {
+  font-weight: 500;
 }

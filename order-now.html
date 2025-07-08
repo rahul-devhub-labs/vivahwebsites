@@ -37,94 +37,119 @@
                         <div class="card-body py-3">
                             <!-- Order Form -->
                             <form>
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Enter Your Email Id <span class="text-danger">*</span></label>
-                                        <input type="email" name="email" class="form-control" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Enter Desired Domain/URL/Website Name <span class="text-danger">*</span></label>
-                                        <input type="text" name="domain_name" class="form-control" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Website Contact Number</label>
-                                        <input type="text" name="contact_number" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Website WhatsApp Number</label>
-                                        <input type="text" name="whatsapp_number" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Owner Full Name / Organization Name <span class="text-danger">*</span></label>
-                                        <input type="text" name="owner_name" class="form-control" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Postal Address</label>
-                                        <textarea class="form-control" name="website_address" rows="2"></textarea>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Religion For</label>
-                                        <select name="religion" class="form-control">
-                                            <option>Hinduism</option>
-                                            <option>Islam</option>
-                                            <option>Christianity</option>
-                                            <option>Buddhism</option>
-                                            <option>Jainism</option>
-                                            <option>For All</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Preferred Website Color Combination</label>
-                                        <input type="text" name="color_combination" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Google Map Location</label>
-                                        <input type="text" name="google_map" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Social Media Links</label>
-                                        <textarea class="form-control" name="social_links" rows="2"></textarea>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Billing Details (Name, Address, Email,
-                                            Contact)</label>
-                                        <textarea class="form-control" name="billing_details" rows="2"></textarea>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Show Powered By On Bottom Of Website? <span class="text-danger">*</span></label>
-                                        <select class="form-select" name="show_powered_by">
-                                            <option value="yes">Yes</option>
-                                            <option value="no">No</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Matrimony Website Logo (300x250 px, .png
-                                            format)</label>
-                                        <input type="file" name="website_logo" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Banner Images (1920x1080 px, max 5 files)</label>
-                                        <input type="file" name="banner_images[]" class="form-control" multiple>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label" name="template">Template</label>
-                                        <select class="form-select">
-                                            <option value="basic">Basic Theme</option>
-                                            <option value="advance">Advance Theme</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" id="agree">
-                                            <label class="form-check-label" for="agree">
-                                                I have read and agree to the terms, conditions, and privacy policy.
-                                            </label>
+                                <!-- Basic ID Details -->
+                                <div class="mb-4">
+                                    <h6 class="form-section-title"><i
+                                            class="fas fa-user-circle me-2 text-maroon"></i>Basic ID Details</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email ID <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="email" name="email" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Desired Domain/URL/Website Name <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" name="domain_name" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Owner Full Name / Organization <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" name="owner_name" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Website Contact Number</label>
+                                            <input type="text" name="contact_number" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">WhatsApp Number</label>
+                                            <input type="text" name="whatsapp_number" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Postal Address</label>
+                                            <textarea class="form-control" name="website_address" rows="2"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <button type="submit" class="btn matrimonyx-btn-primary py-2">Submit
-                                            Order</button>
+                                </div>
+
+                                <!-- Website Features -->
+                                <div class="mb-4">
+                                    <h6 class="form-section-title"><i class="fas fa-globe me-2 text-maroon"></i>Website
+                                        Features</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Religion For</label>
+                                            <select name="religion" class="form-select">
+                                                <option>Hinduism</option>
+                                                <option>Islam</option>
+                                                <option>Christianity</option>
+                                                <option>Buddhism</option>
+                                                <option>Jainism</option>
+                                                <option>For All</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Preferred Color Combination</label>
+                                            <input type="text" name="color_combination" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Google Map Location</label>
+                                            <input type="text" name="google_map" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Social Media Links</label>
+                                            <textarea class="form-control" name="social_links" rows="2"></textarea>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Select Template</label>
+                                            <select name="template" class="form-select">
+                                                <option value="basic">Basic Theme</option>
+                                                <option value="advance">Advance Theme</option>
+                                            </select>
+                                        </div>
                                     </div>
+                                </div>
+
+                                <!-- Billing Details -->
+                                <div class="mb-4">
+                                    <h6 class="form-section-title"><i
+                                            class="fas fa-file-invoice-dollar me-2 text-maroon"></i>Billing Details</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-12">
+                                            <label class="form-label">Billing Info (Name, Address, Email,
+                                                Contact)</label>
+                                            <textarea class="form-control" name="billing_details" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Data / Content Upload -->
+                                <div class="mb-4">
+                                    <h6 class="form-section-title"><i class="fas fa-upload me-2 text-maroon"></i>Data /
+                                        Content Upload</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Logo (300x250 px, PNG)</label>
+                                            <input type="file" name="website_logo" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Banner Images (1920x1080 px, Max 5)</label>
+                                            <input type="file" name="banner_images[]" class="form-control" multiple>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Agreement -->
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" id="agree" required>
+                                    <label class="form-check-label" for="agree">
+                                        I have read and agree to the terms, conditions, and privacy policy.
+                                    </label>
+                                </div>
+
+                                <div class="mt-4 text-center">
+                                    <button type="submit" class="btn matrimonyx-btn-primary px-4 py-2">Submit
+                                        Order</button>
                                 </div>
                             </form>
 
